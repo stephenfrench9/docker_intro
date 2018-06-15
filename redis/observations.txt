@@ -1,0 +1,36 @@
+Observations:
+
+
+********App.py********
+The python script app.py has an object called 'app' from the Flask library.
+
+The python script app.py has an object called 'cache' which is associated with
+port 6379.
+
+The app is told to run on 0.0.0.0
+
+The function that is associate with root of 0.0.0.0 is called hello()
+
+hello() executes a continuous loop, calling an increment method of the cache
+object.
+
+
+********docker-compose.yml********
+There are two services, the web service and the redis service.
+
+The webservice is constructed from my current directory.
+
+There are two declared ports, 5000 and 5000. (conjecture: one is the port
+that the container will broadcast to, and the other is the port that the
+programs that are executing inside of it will broadcast to)
+
+The redis service is downloaded from docker. I know that is has a default
+port (When somebody wrote the Dockerfile for this image, they included
+EXPOSE 6379) (Question: do containers sprung from this image have a default
+name 'redis'?)
+
+
+********Dockerfile********
+The current directory on my host machine gets imported into this container
+
+python app.py gets typed into the command line of the container
