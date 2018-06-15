@@ -1,0 +1,17 @@
+****Dockerfile****
+you name the image to base this all on, you say some files to iclude in the
+image
+
+****commands****
+build an image
+run the the image
+
+The build command is pretty much: docker build image_name
+But you do explicity say which directory will be turned into an image
+
+The run command can be more complicated. You give your container a name.
+You say what image to use. But you also tell it which ports to expose.
+
+Conjecture: when you name ports for nginx in the format %%%%:%%%% the first
+number is the number that you will visit in your browser, and the second
+number is the default port for the internals of  nginx. 
